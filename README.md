@@ -6,9 +6,11 @@ It's been made with as much modularity as possible in mind, meaning that you can
 you want/can swipe on. 
 
 ## What does it do
-1. Swipes on:
-    a. Tinder
-    b. Bumble
+1. Goes to the website and logs in.
+2. Swipes on: \
+    a. Tinder \
+    b. Bumble \
+    Until there are not more likes available. 
 2. Sends a message to a match when it occurs (only on Tinder)
 3. Sends you a message on Telegram with a report. 
 
