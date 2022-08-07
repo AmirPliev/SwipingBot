@@ -26,3 +26,4 @@ def test_format():
     }
 
     format_results(test)
+    

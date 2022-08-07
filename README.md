@@ -3,7 +3,7 @@
 
 This repository contains a python bot that automatically opens up your Tinder and/or Bumble account and starts swiping for you. 
 It's been made with as much modularity as possible in mind, meaning that you can add and/or remove whatever platform
-you want/can swipe on. 
+you want/can swipe on. I made this as an exercise to apply Selenium for an automation task. 
 
 ## What does it do
 1. Goes to the website and logs in.
