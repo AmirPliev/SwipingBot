@@ -7,4 +7,5 @@ class TinderDialogs(Enum):
 
 class BumbleDialogs(Enum):
     END = bumble_ids["end_of_line"]
+    PLEASE_PAY = bumble_ids["exit_pay_btn"]
 

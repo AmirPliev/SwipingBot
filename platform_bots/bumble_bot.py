@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 from platform_bots.bot_template import SwipingBot
 from utils.login_methods import handle_facebook_popup
+from utils.enums import BumbleDialogs
 
 from utils.identifiers import *
 
@@ -46,11 +47,18 @@ class BumbleBot(SwipingBot):
         print("[BOOT] No popups handling necessary, moving on.")
 
     def _perform_swipe(self):
-        if randint(0, 10) == 1:
+        probability_limit = int(10 - (self.swipes * 0.2))
+        random_number = randint(0, probability_limit)
+        print(f"[DEBUG] Random number generated: {random_number}, from limit: {probability_limit}")
+        if random_number == 1:
             self._dislike()
         else:
             self._like()
 
     def _handle_blockade(self, blockade):
-        if blockade:
-            return False
+        # TODO: This could be a wrong identifier causing us to click on SuperSwipe instead of like. Investiage pls
+        if blockade == BumbleDialogs.PLEASE_PAY:
+            self.driver.find_element(By.XPATH, self.ids["exit_pay_btn"]).click()
+            return True
+        
+        return False

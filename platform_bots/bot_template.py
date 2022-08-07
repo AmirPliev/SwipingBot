@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from selenium.webdriver.common.by import By
 
+import sys
 import time
 
 class SwipingBot(ABC):
@@ -38,8 +39,9 @@ class SwipingBot(ABC):
 
         time.sleep(5)
         while True:
-            print("[RUN] Swiping")
-
+            print("[RUN] Swiping... ", end="")
+            sys.stdout.flush()
+            
             try:
                 self._perform_swipe()
                 self.swipes +=1 
@@ -55,9 +57,10 @@ class SwipingBot(ABC):
                         
                 else:
                     print("[TERMINATION] Something went wrong? Investigate here!")
+                    import pdb; pdb.set_trace()
                     break
                 
-            time.sleep(2)
+            time.sleep(5)
 
     def _create_results_dict(self):
         """Package up our results after swiping."""

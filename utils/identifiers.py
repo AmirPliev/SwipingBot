@@ -15,15 +15,16 @@ tinder_ids  = {
 }
 
 bumble_ids  = {
-    "like_id": str('/html/body/div/div/div[1]/main/div[2]/div/div/span/div[2]/div/div[2]/div/div[3]/div/div[1]/span'),
-    "dislike_id": str('/html/body/div/div/div[1]/main/div[2]/div/div/span/div[2]/div/div[2]/div/div[1]/div/div[1]/span'),
+    "like_btn": str('/html/body/div/div/div[1]/main/div[2]/div/div/span/div[2]/div/div[2]/div/div[3]/div/div[1]/span'),
+    "dislike_btn": str('/html/body/div/div/div[1]/main/div[2]/div/div/span/div[2]/div/div[2]/div/div[1]/div/div[1]/span'),
     "cookie_frame": str('//*[@id="sp_message_iframe_635134"]'),
     "cookie_accept": str("//*[@title='Accept All']"),
     "sign_in_button": str('/html/body/div[2]/div/div/div[1]/div/div[2]/div/div/div/div[2]/div[1]/div/div[2]/a'),
     "facebook_signin1": str('/html/body/div/div/div[1]/div[2]/main/div/div[3]/form/div[1]/div/div[2]/div/span/span[2]/span'),
     "facebook_signin2": str('/html/body/div/div/div[1]/div[2]/main/div/div[3]/form/div[1]/div/div[1]/div/span/span[2]/span'),
     "continue_button": str('/html/body/div/div/div[1]/div[1]/div/div[2]/div/div/div/section/div/div/div/div/div/span/span/span/span'),
-    "end_of_line": str('/html/body/div/div/div[1]/main/div[2]/div/div/span/div/section/div/div[2]/div/span/span/span/span')
+    "end_of_line": str('/html/body/div/div/div[1]/main/div[2]/div/div/span/div/section/div/div[2]/div/span/span/span/span'),
+    "exit_pay_btn": str('/html/body/div/div/div[1]/div[1]/div/div[2]/div/div[2]')
 }
 
 facebook_ids = {

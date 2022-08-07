@@ -7,6 +7,7 @@ from utils.login_methods import handle_facebook_popup
 
 from random import randint
 from configs import OPENER
+import sys
 
 GEO_LIMIT = 500  # KMs
 
@@ -85,7 +86,8 @@ class TinderBot(SwipingBot):
             location = int(str_location.split(" ")[0])
             return location
         except:
-            print("[RUN] Could not find location... Liking randomly")
+            print(" | Could not find location, liking randomly... ", end="") 
+            sys.stdout.flush()
             return 0
 
     def _deal_with_match(self):
