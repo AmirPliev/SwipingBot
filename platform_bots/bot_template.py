@@ -57,7 +57,6 @@ class SwipingBot(ABC):
                         
                 else:
                     print("[TERMINATION] Something went wrong? Investigate here!")
-                    import pdb; pdb.set_trace()
                     break
                 
             time.sleep(5)

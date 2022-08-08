@@ -47,18 +47,24 @@ class BumbleBot(SwipingBot):
         print("[BOOT] No popups handling necessary, moving on.")
 
     def _perform_swipe(self):
-        probability_limit = int(10 - (self.swipes * 0.2))
-        random_number = randint(0, probability_limit)
-        print(f"[DEBUG] Random number generated: {random_number}, from limit: {probability_limit}")
-        if random_number == 1:
-            self._dislike()
-        else:
-            self._like()
+        self._like()
+
+        # probability_limit = int(10 - (self.swipes * 0.2))
+        # random_number = randint(0, probability_limit)
+        # print(f"[DEBUG] Random number generated: {random_number}, from limit: {probability_limit}")
+        # if random_number == 1:
+        #     self._dislike()
+        # else:
+        #     self._like()
 
     def _handle_blockade(self, blockade):
-        # TODO: This could be a wrong identifier causing us to click on SuperSwipe instead of like. Investiage pls
         if blockade == BumbleDialogs.PLEASE_PAY:
             self.driver.find_element(By.XPATH, self.ids["exit_pay_btn"]).click()
+            self.driver.find_element(By.XPATH, self.ids["second_like_btn"]).click()
+            return True
+
+        if blockade == BumbleDialogs.MATCH:
+            self.driver.find_element(By.XPATH, self.ids["continue_after_match_btn"]).click()
             return True
         
         return False

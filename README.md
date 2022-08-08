@@ -43,6 +43,6 @@ That's it! Now you could automate it using cron to run every day or at whatever 
 
 ## Possible future improvements
 
-- [ ] Implement Match handling for Bumble (right now there's nothing, it just breaks.)
+- [x] Implement Match handling for Bumble (right now there's nothing, it just breaks.)
 - [ ] Login using different methods than Facebook.
 - [ ] Additional platforms (They need to have webpages.)

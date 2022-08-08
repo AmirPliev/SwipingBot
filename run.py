@@ -36,3 +36,4 @@ if __name__ == "__main__":
     print(f"[RESULTS] Results: {results}")
     telegram.send(messages=[format_results(results)], parse_mode = "markdown")
 
+

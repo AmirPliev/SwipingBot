@@ -11,7 +11,7 @@ tinder_ids  = {
     "tinder_plus_dialog": str('/html/body/div[2]/div/div'),
     "match_dialog": str("//*[@placeholder='Say something nice!']"),
     "match_message_field": str("//*[@type='submit']"),
-    "profile_location_element": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[3]/div[3]/div/div[2]/div/div/div[2]/div[2]')
+    "profile_location_element": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[3]/div[3]/div/div[2]/div/div/div[2]/div[2]'),
 }
 
 bumble_ids  = {
@@ -24,7 +24,9 @@ bumble_ids  = {
     "facebook_signin2": str('/html/body/div/div/div[1]/div[2]/main/div/div[3]/form/div[1]/div/div[1]/div/span/span[2]/span'),
     "continue_button": str('/html/body/div/div/div[1]/div[1]/div/div[2]/div/div/div/section/div/div/div/div/div/span/span/span/span'),
     "end_of_line": str('/html/body/div/div/div[1]/main/div[2]/div/div/span/div/section/div/div[2]/div/span/span/span/span'),
-    "exit_pay_btn": str('/html/body/div/div/div[1]/div[1]/div/div[2]/div/div[2]')
+    "exit_pay_btn": str('/html/body/div/div/div[1]/div[1]/div/div[2]/div/div[2]'),
+    "continue_after_match_btn": str('/html/body/div/div/div[1]/main/div[2]/article/div/footer/div[2]/div[2]/div/span/span/span/span'),
+    "second_like_btn": str('/html/body/div/div/div[1]/main/div[2]/div/div/span/div[2]/div/div[2]/div/div[4]/div/div[1]/span'),
 }
 
 facebook_ids = {
