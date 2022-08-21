@@ -58,6 +58,7 @@ class TinderBot(SwipingBot):
     def _perform_swipe(self):
         
         location = self._get_location()
+        print(f"[DEBUG] Found the following location: {location}", end="")
 
         if location == 0:
             return self._pick_randomly()
@@ -80,15 +81,41 @@ class TinderBot(SwipingBot):
 
     def _get_location(self):
         """Try and find the location from the profile."""
+        for loc_btn in ["loc_element", "loc_element2", "loc_element3"]:
+            location = self.get_innerHTML(loc_btn)
+            if location:
+                return location 
+
         try:
-            location_element = self.driver.find_element(By.XPATH, self.ids["profile_location_element"])
+            self.driver.find_element(By.XPATH, self.ids["more_info_expand"]).click()
+            location = self._try_to_find_location_from_expanded_view()
+            self.driver.find_element(By.XPATH, self.ids["undo_expand"]).click()
+            return location
+        except:
+            print("[LOCATION] Could not find location, liking randomly.", end="")
+
+        return 0
+
+    def _try_to_find_location_from_expanded_view(self):
+        rows_xpath = self.ids["info_rows"]
+        all_rows = self.driver.find_elements(By.XPATH, f"{rows_xpath}")
+        for div in all_rows:
+            content = div.find_elements(By.XPATH, "./*")
+            inner_text = content[1].get_attribute('innerHTML')
+            if "kilometers" in inner_text:
+                location = int(inner_text.split(" ")[0])
+                return location
+
+        return 0
+
+    def get_innerHTML(self, element: str):
+        try:
+            location_element = self.driver.find_element(By.XPATH, self.ids[element])
             str_location = location_element.get_attribute('innerHTML')
             location = int(str_location.split(" ")[0])
             return location
         except:
-            print(" | Could not find location, liking randomly... ", end="") 
-            sys.stdout.flush()
-            return 0
+            return None
 
     def _deal_with_match(self):
         """Event that handles the moment a match has been encountered."""

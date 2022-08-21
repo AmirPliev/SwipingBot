@@ -1,5 +1,6 @@
 tinder_ids  = {
     "like_btn": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[5]/div/div[4]/button'),
+    "like_btn2": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[5]/div/div[4]/button'),
     "dislike_btn": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[5]/div/div[2]/button'),    
     "login_btn": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div/div/header/div/div[2]/div[2]/a'),
     "facebook_login_btn": str('//*[@aria-label="Log in with Facebook"]'),
@@ -8,10 +9,15 @@ tinder_ids  = {
     "allow_location_btn": str('/html/body/div[1]/div/div[2]/div/div/div[1]/div[1]/button'),
     "allow_notifications_btn": str('//*[@aria-label="Enable"]'),
     "1st_like_btn": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[4]/div/div[4]/button'),
-    "tinder_plus_dialog": str('/html/body/div[2]/div/div'),
+    "tinder_plus_dialog": str('/html/body/div[2]/main/div/div[3]/button[1]'),
     "match_dialog": str("//*[@placeholder='Say something nice!']"),
     "match_message_field": str("//*[@type='submit']"),
-    "profile_location_element": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[3]/div[3]/div/div[2]/div/div/div[2]/div[2]'),
+    "loc_element": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[3]/div[3]/div/div[2]/div/div/div[2]/div[2]'),
+    "loc_element2": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[4]/div[3]/div/div[2]/div/div[2]/div[2]/div[2]'),
+    "loc_element3": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[3]/div[3]/div/div[2]/div/div[2]/div/div[2]'),
+    "more_info_expand": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[4]/div[3]/button'),
+    "undo_expand": str('/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[1]/span/a'),
+    "info_rows": str("/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div[2]/div")
 }
 
 bumble_ids  = {
